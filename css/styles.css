@@ -1,5 +1,5 @@
 /* Style the header with a grey background and some padding */
-.header {
+.header-container {
   overflow: hidden;
   background-color: #f1f1f1;
 }
@@ -10,7 +10,7 @@
 }
 
 /* Style the header links */
-.header a {
+a.header {
   float: left;
   color: black;
   text-align: center;
@@ -34,7 +34,7 @@
 }
 
 /* Style the active/current link*/
-.header a.active {
+.header-container a.active {
   background-color: dodgerblue;
   color: white;
 }
