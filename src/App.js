@@ -1,15 +1,11 @@
 import React from 'react';
-import ContactForm from './components/ContactForm.js';
-import Header from './components/Header.js';
-import Main from './components/Main.js';
+import ControlledTabs from './components/ControlledTabs.js';
 import './css/styles.css';
 
 function App() {
   return (
-    <div class="container">
-      <Header />
-      <Main />
-      <ContactForm />
+    <div className="container">
+      <ControlledTabs />
     </div>
   );
 }

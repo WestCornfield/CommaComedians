@@ -9,6 +9,10 @@
   width:100px;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Style the header links */
 a.header {
   float: left;
