@@ -1,6 +1,7 @@
 import React from 'react';
 import Main from './Main.js';
 import ContactForm from './ContactForm.js';
+import Gallery from './Gallery.js';
 
 class Tabs extends React.Component {
 
@@ -9,7 +10,8 @@ class Tabs extends React.Component {
     this.state = {
       activeKey : "main",
       mainClassName : "tabcontent",
-      contactFormClassName : "hidden"
+      contactFormClassName : "hidden",
+      galleryClassName : "hidden"
     }
   }
 
@@ -24,13 +26,22 @@ class Tabs extends React.Component {
       this.setState({
         activeKey : newActiveKey,
         mainClassName : "tabcontent",
-        contactFormClassName : "hidden"
+        contactFormClassName : "hidden",
+        galleryClassName : "hidden"
       });
     } else if (newActiveKey === "contact-form") {
       this.setState({
         activeKey : newActiveKey,
         mainClassName : "hidden",
-        contactFormClassName : "tabcontent"
+        contactFormClassName : "tabcontent",
+        galleryClassName : "hidden"
+      });
+    } else if (newActiveKey === "gallery") {
+      this.setState({
+        activeKey : newActiveKey,
+        mainClassName : "hidden",
+        contactFormClassName : "hidden",
+        galleryClassName : "tabcontent"
       });
     }
   }
@@ -43,6 +54,9 @@ class Tabs extends React.Component {
         </div>
         <div className={this.state.contactFormClassName} id="contact-form">
           <ContactForm />
+        </div>
+        <div className={this.state.galleryClassName} id="gallery">
+          <Gallery />
         </div>
       </div>);
   }

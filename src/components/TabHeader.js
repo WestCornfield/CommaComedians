@@ -9,7 +9,8 @@ class TabHeader extends React.Component {
       activeTab : "home",
       homeClassName : "active header",
       mainClassName : "header",
-      contactFormClassName : "header"
+      contactFormClassName : "header",
+      galleryClassName: "header"
     }
   }
 
@@ -25,21 +26,32 @@ class TabHeader extends React.Component {
           activeTab: "home",
           homeClassName : "active header",
           mainClassName : "header",
-          contactFormClassName : "header"
+          contactFormClassName : "header",
+          galleryClassName: "header"
         });
       } else if (tab === "main") {
         this.setState({
           activeTab: "main",
           homeClassName : "header",
           mainClassName : "active header",
-          contactFormClassName : "header"
+          contactFormClassName : "header",
+          galleryClassName: "header"
         });
       } else if (tab === "contact-form") {
         this.setState({
           activeTab: "contact-form",
           homeClassName : "header",
           mainClassName : "header",
-          contactFormClassName : "active header"
+          contactFormClassName : "active header",
+          galleryClassName: "header"
+        });
+      } else if (tab === "gallery") {
+        this.setState({
+          activeTab: "contact-form",
+          homeClassName : "header",
+          mainClassName : "header",
+          contactFormClassName : "header",
+          galleryClassName: "active header"
         });
       }
     }
@@ -53,6 +65,7 @@ class TabHeader extends React.Component {
           <a className={this.state.homeClassName} onClick={() => this.updateActiveTab("home")} href="#home">Home</a>
           <a className={this.state.mainClassName} onClick={() => this.handleClick("main")} href="#main" >Who Are We?</a>
           <a className={this.state.contactFormClassName} onClick={() => this.handleClick("contact-form")} href="#contact-form" >Contact</a>
+          <a className={this.state.galleryClassName} onClick={() => this.handleClick("gallery")} href="#gallery" >Meet the Commas</a>
         </div>
       </div>);
   }
