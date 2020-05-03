@@ -5,7 +5,7 @@ class Header extends React.Component {
   render() {
     return  (
       <div className="header-container">
-        <a href="#default" class="logo"><img className="logo-img" src={CommaComediansLogo} alt="Comma COmedians Logo"></img></a>
+        <a href="#default" className="logo"><img className="logo-img" src={CommaComediansLogo} alt="Comma Comedians Logo"></img></a>
         <div className="header-right">
           <a className="active header" href="#home">Home</a>
           <a className="header" href="#about">Who Are We?</a>
