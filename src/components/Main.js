@@ -3,9 +3,9 @@ import React from 'react';
 class Main extends React.Component {
   render() {
     return  (
-      <div class="main">
+      <div className="main">
         <h1>Who Are The Commas?</h1>
-        <p class="about" id="about">We are a Comedy Collective originally based out of Memphis, TN. We run shows all across Bluff City.
+        <p className="about" id="about">We are a Comedy Collective originally based out of Memphis, TN. We run shows all across Bluff City.
   Catch us in Memphis at:
   Memphis Made Brewing: Second Saturday of the month
   Secret Show at Local Downtown: Every other Wednesday ( See event list)

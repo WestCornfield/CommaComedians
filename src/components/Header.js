@@ -4,12 +4,12 @@ import CommaComediansLogo from '../assets/CommaComedians.svg';
 class Header extends React.Component {
   render() {
     return  (
-      <div class="header-container">
-        <a href="#default" class="logo"><img class="logo-img" src={CommaComediansLogo}></img></a>
-        <div class="header-right">
-          <a class="active header" href="#home">Home</a>
-          <a class="header" href="#about">Who Are We?</a>
-          <a class="header" href="#contact">Contact</a>
+      <div className="header-container">
+        <a href="#default" class="logo"><img className="logo-img" src={CommaComediansLogo} alt="Comma COmedians Logo"></img></a>
+        <div className="header-right">
+          <a className="active header" href="#home">Home</a>
+          <a className="header" href="#about">Who Are We?</a>
+          <a className="header" href="#contact">Contact</a>
         </div>
       </div>
       );
