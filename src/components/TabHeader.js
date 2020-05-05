@@ -15,8 +15,8 @@ class TabHeader extends React.Component {
   }
 
   handleClick(tab) {
-    this.props.handleTabClick(tab);
     this.updateActiveTab(tab);
+    this.props.handleTabClick(tab);
   }
 
   updateActiveTab(tab) {
@@ -47,7 +47,7 @@ class TabHeader extends React.Component {
         });
       } else if (tab === "gallery") {
         this.setState({
-          activeTab: "contact-form",
+          activeTab: "gallery",
           homeClassName : "header",
           mainClassName : "header",
           contactFormClassName : "header",
