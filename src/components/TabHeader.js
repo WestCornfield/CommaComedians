@@ -6,12 +6,12 @@ class TabHeader extends React.Component {
   constructor() {
     super();
     this.state = {
-      activeTab : "home",
-      homeClassName : "active header",
-      mainClassName : "header",
-      contactFormClassName : "header",
-      galleryClassName: "header"
+      activeTab : "home"
     }
+  }
+
+  tabClassName(tab) {
+    return (this.state.activeTab === tab) ? "active header" : "header";
   }
 
   handleClick(tab) {
@@ -21,39 +21,9 @@ class TabHeader extends React.Component {
 
   updateActiveTab(tab) {
     if (tab !== this.state.activeTab) {
-      if (tab === "home") {
-        this.setState({
-          activeTab: "home",
-          homeClassName : "active header",
-          mainClassName : "header",
-          contactFormClassName : "header",
-          galleryClassName: "header"
-        });
-      } else if (tab === "main") {
-        this.setState({
-          activeTab: "main",
-          homeClassName : "header",
-          mainClassName : "active header",
-          contactFormClassName : "header",
-          galleryClassName: "header"
-        });
-      } else if (tab === "contact-form") {
-        this.setState({
-          activeTab: "contact-form",
-          homeClassName : "header",
-          mainClassName : "header",
-          contactFormClassName : "active header",
-          galleryClassName: "header"
-        });
-      } else if (tab === "gallery") {
-        this.setState({
-          activeTab: "gallery",
-          homeClassName : "header",
-          mainClassName : "header",
-          contactFormClassName : "header",
-          galleryClassName: "active header"
-        });
-      }
+      this.setState({
+        activeTab: tab
+      });
     }
   }
 
@@ -62,10 +32,11 @@ class TabHeader extends React.Component {
       <div className="header-container">
         <a href="#default" className="logo"><img className="logo-img" src={CommaComediansLogo} alt="Comma Comedians Logo"></img></a>
         <div className="header-right">
-          <a className={this.state.homeClassName} onClick={() => this.updateActiveTab("home")} href="#home">Home</a>
-          <a className={this.state.mainClassName} onClick={() => this.handleClick("main")} href="#main" >Who Are We?</a>
-          <a className={this.state.contactFormClassName} onClick={() => this.handleClick("contact-form")} href="#contact-form" >Contact</a>
-          <a className={this.state.galleryClassName} onClick={() => this.handleClick("gallery")} href="#gallery" >Meet the Commas</a>
+          <a className={this.tabClassName("home")} onClick={() => this.updateActiveTab("home")} href="#home">Home</a>
+          <a className={this.tabClassName("main")} onClick={() => this.handleClick("main")} href="#main" >Who Are We?</a>
+          <a className={this.tabClassName("contact-form")} onClick={() => this.handleClick("contact-form")} href="#contact-form" >Contact</a>
+          <a className={this.tabClassName("gallery")} onClick={() => this.handleClick("gallery")} href="#gallery" >Meet the Commas</a>
+          <a className={this.tabClassName("calendar")} onClick={() => this.handleClick("calendar")} href="#calendar" >Calendar</a>
         </div>
       </div>);
   }
