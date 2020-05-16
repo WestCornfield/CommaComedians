@@ -1,0 +1,23 @@
+h1, h2 {
+  font-family: 'Stardos Stencil', cursive;
+}
+
+.calendar {
+  margin:auto;
+  font-family: 'Stardos Stencil', cursive;
+  padding: 0 10%;
+}
+
+.current-month {
+  font-size: 24px;
+  margin-left:10%
+}
+
+.calendar-day {
+  text-align: center;
+}
+
+.today {
+  border-radius: 100%;
+  border: 3px solid #00FF00;
+}
